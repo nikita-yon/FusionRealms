@@ -18,13 +18,40 @@
             text-align: center;
         }
         .title {
-            background-color: #4CAF50; /* Зеленый фон */
-            color: white; /* Цвет текста */
-            padding: 150px; /* Отступы внутри блока */
-            border-radius: 5px; /* Скругленные углы */
-            font-size: 60px; /* Размер шрифта */
-            margin-top: 20px; /* Отступ сверху */
+            position: relative;
+            background-color: #4CAF50;
+            color: white;
+            padding: 150px;
+            border-radius: 5px;
+            font-size: 60px;
+            margin-top: 20px;
+            overflow: hidden;
         }
+        .title::before,
+        .title::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 110%;
+            height: 130%;
+            background-image: url('images/lightning.png'); /* замените на URL молнии */
+            background-size: cover;
+            opacity: 0;
+            animation: lightning-flash 3s infinite ease-in-out;
+        }
+        .title::after {
+            animation-delay: 1.5s;
+        }
+        @keyframes lightning-flash {
+            0%, 100% {
+                opacity: 0;
+            }
+            5%, 15%, 20% {
+                opacity: 1;
+            }
+        }
+        /* Остальной стиль */
         h2 {
             margin-top: 30px;
             color: #555;
@@ -88,6 +115,7 @@
         <div class="title">Fusion Realms</div> <!-- Изменено на div с классом title -->
         <p>Fusion Realms - Игра созданная русским разработчиком ПО на Python Никита Ионих</p>
         <p>Комбинируйте предметы, создавайте уникальные артефакты путем скрещивания и достигните конечной цели — создания Книги Бесконечности!</p>
+        <p>Заряжённые предметы уже доступны в новом обновлении!!! Жми Начать игру!!!</p>
         <a href="https://drive.google.com/drive/folders/19DiUxalEfPMdWC5k6Zpq1QtdIOcS_Gs_?usp=sharing" class="button">Начать игру</a>
 
         <h2>Пример уровней предмета</h2>
