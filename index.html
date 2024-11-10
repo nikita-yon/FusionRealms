@@ -14,10 +14,13 @@
         }
         .container {
             width: 80%;
+
             margin: 0 auto;
             text-align: center;
         }
         .title {
+            background-image: url('images/banner.png');
+            background-position: center;
             position: relative;
             background-color: #4CAF50;
             color: white;
@@ -36,7 +39,8 @@
             width: 110%;
             height: 130%;
             background-image: url('images/lightning.png'); /* замените на URL молнии */
-            background-size: cover;
+            
+            background-size: 1200px 1200px;
             opacity: 0;
             animation: lightning-flash 3s infinite ease-in-out;
         }
@@ -115,7 +119,7 @@
         <div class="title">Fusion Realms</div> <!-- Изменено на div с классом title -->
         <p>Fusion Realms - Игра созданная русским разработчиком ПО на Python Никита Ионих</p>
         <p>Комбинируйте предметы, создавайте уникальные артефакты путем скрещивания и достигните конечной цели — создания Книги Бесконечности!</p>
-        <p style="color: blueviolet;">Заряжённые предметы уже доступны в новом обновлении!!! Жми Начать игру!!!</p>
+        <p style="color: blueviolet;">деформатор и выделение нескольких предметов и их перемещение Уже в новом обновлении!!! Жми Начать игру!!!</p>
         <a href="https://drive.google.com/drive/folders/19DiUxalEfPMdWC5k6Zpq1QtdIOcS_Gs_?usp=sharing" class="button">Начать игру</a>
 
         <h2>Пример уровней предмета</h2>
@@ -167,6 +171,17 @@
                 <h3>Мусорка</h3>
                 <img src="images/trash.png">
                 <p>Удаляет любой предмет, с которым была совмещена, при этом сама мусорка не исчезает.</p>
+            </div>
+            <h2>новое!</h2>
+            <div class="unique-item">
+                <h3>Плавильная печь</h3>
+                <img src="images/furnace.png">
+                <p>Сжигает любой предмет с которым была совмещена и преобразует его с шансом 50% в Медь \ 25% в Магма \ 10% в Нефть, при этом печь не исчезает.</p>
+            </div>
+            <div class="unique-item">
+                <h3>Деформатор</h3>
+                <img src="images/deformer.png">
+                <p>Разделяет любой предмет на его составляющие в рецепте - например Деформатор + топор = камень и дерево, при этом деформатор исчезает.</p>
             </div>
         </div>
         <h2>Моддинг игры</h2>
